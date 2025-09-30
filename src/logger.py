@@ -5,11 +5,11 @@ from datetime import datetime
 # Log file name with timestamp
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
-# Create a "logs" directory in the current working directory
-logs_dir = os.path.join(os.getcwd(), "logs")
+project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+logs_dir = os.path.join(project_dir, "logs")
 os.makedirs(logs_dir, exist_ok=True)
- 
-# Full log file path
+
+# Full path to the log file
 LOG_FILE_PATH = os.path.join(logs_dir, LOG_FILE)
 
 # Logging configuration
