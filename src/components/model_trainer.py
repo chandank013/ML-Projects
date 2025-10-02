@@ -1,5 +1,3 @@
-import os
-os.environ["LOKY_MAX_CPU_COUNT"] = "4"
 import sys
 from dataclasses import dataclass
 
@@ -21,6 +19,8 @@ from src.logger import logging
 
 from src.utils import evaluate_models,save_object
 
+import os
+os.environ["LOKY_MAX_CPU_COUNT"] = "4"
 
 
 @dataclass
