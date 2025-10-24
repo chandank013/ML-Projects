@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLProject</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLProject</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animated gradient background */
+    body {
+      background: linear-gradient(-45deg, #6EE7B7, #3B82F6, #9333EA, #FDE68A);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
-<body>
-    <h1>Welcome to the home page</h1>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white/30 backdrop-blur-xl shadow-2xl rounded-3xl p-12 max-w-3xl w-full text-center border border-white/20">
+    
+    <!-- Heading (horizontal) -->
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap mb-6">
+      👋 Welcome to MLProject
+    </h1>
+
+    <!-- Description (stacked below heading) -->
+    <p class="text-gray-800 text-lg md:text-xl mb-6">
+      Explore Machine Learning models, make predictions, and visualize data seamlessly.
+    </p>
+
+    <!-- Button (stacked below description) -->
+    <a href="/predictdata" class="inline-block bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl">
+      Go to Predictor
+    </a>
+
+  </div>
+
 </body>
 </html>
